@@ -14,6 +14,9 @@ export const getCookie = (name) => {
   return cookies.get(name);
 };
 
-export const removeCookie = (name) => {
-  return cookies.remove(name);
+export const removeCookie = (name, options) => {
+  return cookies.remove(name, {...options});
 };
+
+// 온니쿠키 = 안전하게 쿠키를 보관 
+// 쿠키는 프론트가 관리하는것 보단 브라우저가 저장소를관리하는 것임

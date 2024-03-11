@@ -1,10 +1,23 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const AllContainer = styled.div`
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Content = styled.div`
+  width: 1200px;
+  margin: 0 auto;
+`;
+
 export const Container = styled.div`
   width: 500px;
   height: 500px;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   display: flex;
   flex-direction: column; /* 요소들을 세로로 정렬 */
   align-items: center;
@@ -16,6 +29,13 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
 `;
 
+export const TodoContainer = styled.div`
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const Title = styled.h2`
   margin-bottom: 20px;
   font-size: 32px;
@@ -23,12 +43,12 @@ export const Title = styled.h2`
 
 export const InputContainer = styled.div`
   display: flex;
-  flex-direction: column; 
-  margin-bottom: 20px; 
+  flex-direction: column;
+  margin-bottom: 20px;
 `;
 
 export const Input = styled.input`
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   width: 250px;
   height: 30px;
 `;
@@ -69,4 +89,3 @@ export const CustomLink2 = styled(Link)`
     text-decoration: none;
   }
 `;
-

@@ -1,10 +1,13 @@
-import { removeCookie } from "../cookies/cookies";
-import { Container, Title, Button } from "../components/input";
+import { removeCookie } from "../../cookies/cookies";
+import { TodoContainer, Content,Title, Button, AllContainer } from "../../components/users/input";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Input from "../../components/todos/Input";
+import State from "../../components/todos/State";
 
 const Mypage = () => {
   const router = useNavigate();
+  
 
   // 로그아웃 처리 함수
   const LogoutHandler = () => {
@@ -22,11 +25,17 @@ const Mypage = () => {
   }, [router]); 
 
   return (
-    <>
-      <Container>
+    <>    
+    <AllContainer>
+        <TodoContainer>
         <Title>Todos</Title>
         <Button onClick={LogoutHandler}>로그아웃</Button>
-      </Container>
+        </TodoContainer>
+        <Input />
+    </AllContainer>
+      <Content>
+      <State />
+      </Content>
     </>
   );
 };
